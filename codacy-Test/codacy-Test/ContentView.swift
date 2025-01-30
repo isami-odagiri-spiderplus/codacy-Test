@@ -16,19 +16,26 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
+        .onAppear {
+            testMethod()
+        }
     }
 }
 
 extension ContentView {
     func testMethod() {
         var count = 0
+        var count2 = 0
+        var count3 = 0
+        var count4 = 0
+        
         if count == 0 {
             count += 1
-            if count == 1 {
+            if count2 == 1 {
                 count += 1
-                if count == 2 {
+                if count3 == 2 {
                     count += 1
-                    if count == 3 {
+                    if count4 == 3 {
                         count += 1
                     } else {
                         count -= 1
