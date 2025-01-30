@@ -44,6 +44,8 @@ extension ContentView {
             }
         }
         print("\(count)")
+        
+        testMethod2(a: 1, b: 2, c: 3, d: 1, e: 2, f: 3, g: 1)
     }
     
     func testMethod2(a: Int, b: Int, c: Int, d: Int, e: Int, f: Int, g: Int) {
