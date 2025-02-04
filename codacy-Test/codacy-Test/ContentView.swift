@@ -8,12 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    let optionalString = Optional<String>("test")
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("Hello, world!")
+            Button {
+                if let optionalString = optionalString {
+                    print("Button tapped")
+                }
+            } label: {
+            }
         }
         .padding()
         .onAppear {
