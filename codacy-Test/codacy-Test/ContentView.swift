@@ -17,9 +17,7 @@ struct ContentView: View {
                 .foregroundStyle(.tint)
             Text("Hello, world!")
             Button {
-                if let optionalString = optionalString {
-                    print("Button tapped")
-                }
+                print(optionalString!)
             } label: {
             }
         }
