@@ -14,7 +14,6 @@ jobs:
   pr_agent:
     runs-on: ubuntu-latest
     name: Run PR Agent
-    if: ${{ github.event.sender.type != 'Bot' }}
     steps:
       - id: pr-agent
         uses: Codium-ai/pr-agent@main
@@ -24,6 +23,11 @@ jobs:
           github_action.auto_describe: true
           github_action.auto_review: true
           github_action.auto_improve: true
-          PR_DESCRIPTION.EXTRA_INSTRUCTIONS: '日本語で記述してください。タイトルに次のPrefixをつけてください。`feat:`, `fix:`, `perf:`, `refactor:`, `test:`, `chore:`, `ci:`, `docs:` etc'
-          PR_REVIEWER.EXTRA_INSTRUCTIONS: '日本語で記述してください。'
+          PR_REVIEWER.EXTRA_INSTRUCTIONS: >- 
+            日本語で回答してください。 
+          PR_DESCRIPTION.EXTRA_INSTRUCTIONS: >- 
+            日本語で回答してください。
+            タイトルは feat: 、chore: 、test: 、fix: 、ci: 、docs: などの
+            commitlint パターンの接頭辞を含む必要があります。
           PR_CODE_SUGGESTIONS.EXTRA_INSTRUCTIONS: '日本語で記述してください。'
+          CONFIG.MODEL: gpt-4-1106-preview
