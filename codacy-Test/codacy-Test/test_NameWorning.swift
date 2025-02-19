@@ -36,4 +36,10 @@ final class test_NameWorning {
             print("aaaa")
         }
     }
+    
+    func testWeakSelf() {
+        let callBack = {
+            self.testMethod2(a: 0, b: 0, c: 0, d: 0, e: 0, f: 0, g: 0)
+        }
+    }
 }
