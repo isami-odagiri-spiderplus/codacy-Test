@@ -29,4 +29,11 @@ final class test_NameWorning {
             }
         }
     }
+    
+    func _testMethod2(a: Int?, b: Int?, c: Int, d: Int, e: Int, f: Int, g: Int) {
+        let a = a!
+        if a == 0 {
+            print("aaaa")
+        }
+    }
 }
