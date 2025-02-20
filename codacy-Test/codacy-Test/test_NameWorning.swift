@@ -29,4 +29,23 @@ final class test_NameWorning {
             }
         }
     }
+    
+    func _testMethod2(a: Int?, b: Int?, c: Int, d: Int, e: Int, f: Int, g: Int) {
+        let a = a!
+        if a == 0 {
+            print("aaaa")
+        }
+    }
+    
+    func testWeakSelf() {
+        let callBack = {
+            self.testMethod2(a: 0, b: 0, c: 0, d: 0, e: 0, f: 0, g: 0)
+        }
+    }
+    
+    func testWeakSelf2() {
+        let callBack = {
+            self.testMethod2(a: 0, b: 0, c: 0, d: 0, e: 0, f: 0, g: 0)
+        }
+    }
 }
